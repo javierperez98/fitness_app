@@ -17,6 +17,7 @@ app.use(express.static("public"));
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/populatedb", {
 	useNewUrlParser: true,
+	useUnifiedTopology: true,
 });
 
 // Start the server
