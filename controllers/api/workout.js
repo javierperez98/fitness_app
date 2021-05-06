@@ -30,4 +30,13 @@ router.put("/", function (req, res) {
 	}
 });
 
+// getWorkoutsInRange() {
+// const res = await fetch(`/api/workouts/range`);
+router.get("/range", function (req, res) {
+	try {
+	} catch (err) {
+		res.status(500).json(err);
+	}
+});
+
 module.exports = router;
