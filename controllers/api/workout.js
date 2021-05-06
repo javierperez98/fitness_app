@@ -20,4 +20,14 @@ router.post("/", function (req, res) {
 	}
 });
 
+// const id = location.search.split("=")[1];
+// const res = await fetch("/api/workouts/" + id, {
+// method: "PUT"
+router.put("/", function (req, res) {
+	try {
+	} catch (err) {
+		res.status(500).json(err);
+	}
+});
+
 module.exports = router;
