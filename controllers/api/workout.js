@@ -10,4 +10,14 @@ router.get("/", function (req, res) {
 	}
 });
 
+// createWorkout(data = {}) {
+// const res = await fetch("/api/workouts", {
+// method: "POST",
+router.post("/", function (req, res) {
+	try {
+	} catch (err) {
+		res.status(500).json(err);
+	}
+});
+
 module.exports = router;
