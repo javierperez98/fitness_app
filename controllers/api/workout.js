@@ -1,8 +1,6 @@
 const router = require("express").Router();
 const db = require("../../models");
 
-// getLastWorkout
-// res = await fetch("/api/workouts");
 router.get("/", async (req, res) => {
 	try {
 		const lastWorkout = await db.Workout.find({}).sort({ _id: 1 });
@@ -12,9 +10,6 @@ router.get("/", async (req, res) => {
 	}
 });
 
-// createWorkout(data = {}) {
-// const res = await fetch("/api/workouts", {
-// method: "POST",
 router.post("/", async (req, res) => {
 	try {
 		const newWorkout = await db.Workout.create(req.body);
@@ -24,9 +19,6 @@ router.post("/", async (req, res) => {
 	}
 });
 
-// const id = location.search.split("=")[1];
-// const res = await fetch("/api/workouts/" + id, {
-// method: "PUT"
 router.put("/:id", async (req, res) => {
 	try {
 		const newExercise = await db.Workout.findByIdAndUpdate(
@@ -40,10 +32,10 @@ router.put("/:id", async (req, res) => {
 	}
 });
 
-// getWorkoutsInRange() {
-// const res = await fetch(`/api/workouts/range`);
 router.get("/range", async (req, res) => {
 	try {
+		const range = await db.Workout.find({}).limit(7).sort({ _id: -1 });
+		res.status(200).json(range);
 	} catch (err) {
 		res.status(500).json(err);
 	}
