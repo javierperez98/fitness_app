@@ -1,10 +1,12 @@
 const router = require("express").Router();
-// const db = require("../../models");
+const db = require("../../models");
 
 // getLastWorkout
 // res = await fetch("/api/workouts");
-router.get("/", function (req, res) {
+router.get("/", async (req, res) => {
 	try {
+		const workouts = await db.Workout.find({}).sort({ _id: 1 });
+		res.status(200).json(workouts);
 	} catch (err) {
 		res.status(500).json(err);
 	}
@@ -13,7 +15,7 @@ router.get("/", function (req, res) {
 // createWorkout(data = {}) {
 // const res = await fetch("/api/workouts", {
 // method: "POST",
-router.post("/", function (req, res) {
+router.post("/", async (req, res) => {
 	try {
 	} catch (err) {
 		res.status(500).json(err);
@@ -23,7 +25,7 @@ router.post("/", function (req, res) {
 // const id = location.search.split("=")[1];
 // const res = await fetch("/api/workouts/" + id, {
 // method: "PUT"
-router.put("/", function (req, res) {
+router.put("/", async (req, res) => {
 	try {
 	} catch (err) {
 		res.status(500).json(err);
@@ -32,7 +34,7 @@ router.put("/", function (req, res) {
 
 // getWorkoutsInRange() {
 // const res = await fetch(`/api/workouts/range`);
-router.get("/range", function (req, res) {
+router.get("/range", async (req, res) => {
 	try {
 	} catch (err) {
 		res.status(500).json(err);
