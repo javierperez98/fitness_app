@@ -34,14 +34,14 @@ function tallyExercises(exercises) {
 }
 
 function formatDate(date) {
-	const newDate = new Date(date);
-	const formatedDate =
-		newDate.getMonth() +
-		1 +
-		"/" +
-		(newDate.getDate() + 1 + "/") +
-		newDate.getFullYear();
-	return formatedDate;
+	const options = {
+		weekday: "long",
+		year: "numeric",
+		month: "long",
+		day: "numeric",
+	};
+
+	return new Date(date).toLocaleDateString(options);
 }
 
 function renderWorkoutSummary(summary) {
