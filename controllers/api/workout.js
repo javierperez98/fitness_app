@@ -5,8 +5,8 @@ const db = require("../../models");
 // res = await fetch("/api/workouts");
 router.get("/", async (req, res) => {
 	try {
-		const workouts = await db.Workout.find({}).sort({ _id: 1 });
-		res.status(200).json(workouts);
+		const lastWorkout = await db.Workout.find({}).sort({ _id: 1 });
+		res.status(200).json(lastWorkout);
 	} catch (err) {
 		res.status(500).json(err);
 	}
@@ -17,6 +17,8 @@ router.get("/", async (req, res) => {
 // method: "POST",
 router.post("/", async (req, res) => {
 	try {
+		const newWorkout = await db.Workout.create(req.body);
+		res.status(200).json(newWorkout);
 	} catch (err) {
 		res.status(500).json(err);
 	}
