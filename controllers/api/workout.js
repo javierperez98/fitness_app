@@ -35,7 +35,8 @@ router.put("/:id", async (req, res) => {
 router.get("/range", async (req, res) => {
 	try {
 		const range = await db.Workout.find({}).limit(7).sort({ _id: -1 });
-		res.status(200).json(range);
+		const newrange = range.reverse();
+		res.status(200).json(newrange);
 	} catch (err) {
 		res.status(500).json(err);
 	}

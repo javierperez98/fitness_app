@@ -176,15 +176,18 @@ function calculateTotalDuration(data) {
 	let totals = [];
 
 	data.forEach((workout) => {
-		const workoutTotal = workout.exercises.reduce((total, { type, duration }) => {
-			if (type === "resistance" || "cardio") {
-				return total + duration;
-			} else {
-				return total;
-			}
-		}, 0);
+		const durationTotal = workout.exercises.reduce(
+			(total, { type, duration }) => {
+				if (type === "resistance" || "cardio") {
+					return total + duration;
+				} else {
+					return total;
+				}
+			},
+			0
+		);
 
-		totals.push(workoutTotal);
+		totals.push(durationTotal);
 	});
 
 	return totals;
