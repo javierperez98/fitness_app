@@ -27,8 +27,14 @@ router.post("/", async (req, res) => {
 // const id = location.search.split("=")[1];
 // const res = await fetch("/api/workouts/" + id, {
 // method: "PUT"
-router.put("/", async (req, res) => {
+router.put("/:id", async (req, res) => {
 	try {
+		const newExercise = await db.Workout.findByIdAndUpdate(
+			req.params.id,
+			{ $push: { exercises: req.body } },
+			{ new: true, runValidators: true }
+		);
+		res.status(200).json(newExercise);
 	} catch (err) {
 		res.status(500).json(err);
 	}
