@@ -22,7 +22,7 @@ function generatePalette() {
 }
 
 function populateChart(data) {
-	let totalDuration = calculateTotalDuration(data);
+	let durations = data.map(({ totalDuration }) => totalDuration);
 	let pounds = calculateTotalWeight(data);
 	let workouts = workoutNames(data);
 	const colors = generatePalette();
@@ -56,7 +56,7 @@ function populateChart(data) {
 					label: "Workout Duration In Minutes",
 					backgroundColor: "red",
 					borderColor: "red",
-					data: totalDuration,
+					data: durations,
 					fill: false,
 				},
 			],
@@ -140,7 +140,7 @@ function populateChart(data) {
 				{
 					label: "Exercises Performed",
 					backgroundColor: colors,
-					data: totalDuration,
+					data: durations,
 				},
 			],
 		},
@@ -172,26 +172,7 @@ function populateChart(data) {
 		},
 	});
 }
-function calculateTotalDuration(data) {
-	let totals = [];
 
-	data.forEach((workout) => {
-		const durationTotal = workout.exercises.reduce(
-			(total, { type, duration }) => {
-				if (type === "resistance" || "cardio") {
-					return total + duration;
-				} else {
-					return total;
-				}
-			},
-			0
-		);
-
-		totals.push(durationTotal);
-	});
-
-	return totals;
-}
 function calculateTotalWeight(data) {
 	let totals = [];
 
