@@ -1,21 +1,21 @@
-# Fitness Tracker App
+# `Fitness Tracker App`
 
 <p align="center">
-    <img src="https://img.shields.io/github/repo-size/javierperez98/employee_directory" />
-    <img src="https://img.shields.io/github/languages/top/javierperez98/employee_directory"  />
-    <img src="https://img.shields.io/github/last-commit/javierperez98/employee_directory" >
+    <img src="https://img.shields.io/github/repo-size/javierperez98/fitness_app" />
+    <img src="https://img.shields.io/github/languages/top/javierperez98/fitness_app"  />
+    <img src="https://img.shields.io/github/last-commit/javierperez98/fitness_app" >
     <a href="https://github.com/javierperez98"><img src="https://img.shields.io/github/followers/javierperez98?style=social" target="_blank" /></a>
 </p>
 <p align="center">
     <img src="https://img.shields.io/badge/language-MongoDB-green" />
     <img src="https://img.shields.io/badge/language-Node.js-green" />
     <img src="https://img.shields.io/badge/license-MIT-blue" />
-    <img src="https://img.shields.io/tokei/lines/github/javierperez98/employee_directory" />
+    <img src="https://img.shields.io/tokei/lines/github/javierperez98/fitness_app" />
 </p>
 
 <a href="https://fitness-tracker-app-jp.herokuapp.com"><h1 align="center">Deployed Webpage</h1></a>
 
-## Description
+## `Description`
 
 <!-- Provide a short description explaining the what, why, and how of your project.
 What was your motivation? Why did you build this project? What problem does it solve? What did you learn? -->
@@ -23,7 +23,7 @@ What was your motivation? Why did you build this project? What problem does it s
 - In this project I created a NOSQL database for a Fitness Tracker App using MongoDB, mongoose.js, express.js and node.js.
   This app lets you create a workout and add excersies to your workout. You can also create a new workout. It gives you an easy to use inferface to tracker all your workouts. I really enjoyed building this database and will being using MongoDB in the future.
 
-## Table of Contents
+## `Table of Contents`
 
 - [Installation](#installation)
 - [Usage](#usage)
@@ -31,30 +31,35 @@ What was your motivation? Why did you build this project? What problem does it s
 - [License](#license)
 - [Questions](#questions)
 
-## Installation
+## `Installation`
 
 <!-- What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running. -->
 
-- To install copy and paste either the SSH or HTTPS key and run it in either Bash (PC Users) or Terminal (MAC Users) using the git clone command.
+To install copy and paste either the SSH or HTTPS key and run it in either Bash (PC Users) or Terminal (MAC Users) using the git clone command.
+
+- SSH key:
 
 ```md
-SSH key: git clone git@github.com:javierperez98/fitness_app.git
-HTTPS key : git clone https://github.com/javierperez98/fitness_app.git
+git clone git@github.com:javierperez98/fitness_app.git
 ```
 
-- Next you'll have to install all the required node modules by opening the index.js file using terminal/bash and typing in the following command.
+- HTTPS key:
+
+```md
+git clone https://github.com/javierperez98/fitness_app.git
+```
+
+Next you'll have to install all the required node modules by opening the index.js file using terminal/bash and typing in the following command.
 
 ```md
 npm i
 or
 npm install
 and then
-npm run seed
-and then
 npm start
 ```
 
-## Usage
+## `Usage`
 
 <!-- Provide instructions and examples for use. Include screenshots as needed. -->
 
@@ -70,7 +75,7 @@ npm start
 
 ![Dashboard of Stats](public/images/dashboard.png)
 
-## Credits
+## `Credits`
 
 <!-- List your collaborators, if any, with links to their GitHub profiles. Links to websites or resources. -->
 
@@ -84,7 +89,7 @@ npm start
 - https://stackoverflow.com/
 - https://mongoosejs.com/docs/guide.html#toJSON
 
-## License
+## `License`
 
 <!-- If you need help choosing a license, refer to https://choosealicense.com/ -->
 
@@ -110,7 +115,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-## Questions
+## `Questions`
 
 Contact me for any questions you might have.
 
