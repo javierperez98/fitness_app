@@ -1,6 +1,19 @@
 # Fitness Tracker App
 
-![MIT](https://img.shields.io/github/license/microsoft/vscode)
+<p align="center">
+    <img src="https://img.shields.io/github/repo-size/javierperez98/employee_directory" />
+    <img src="https://img.shields.io/github/languages/top/javierperez98/employee_directory"  />
+    <img src="https://img.shields.io/github/last-commit/javierperez98/employee_directory" >
+    <a href="https://github.com/javierperez98"><img src="https://img.shields.io/github/followers/javierperez98?style=social" target="_blank" /></a>
+</p>
+<p align="center">
+    <img src="https://img.shields.io/badge/language-MongoDB-green" />
+    <img src="https://img.shields.io/badge/language-Node.js-green" />
+    <img src="https://img.shields.io/badge/license-MIT-blue" />
+    <img src="https://img.shields.io/tokei/lines/github/javierperez98/employee_directory" />
+</p>
+
+<a href="https://fitness-tracker-app-jp.herokuapp.com"><h1 align="center">Deployed Webpage</h1></a>
 
 ## Description
 
